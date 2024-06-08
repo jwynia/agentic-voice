@@ -22,6 +22,8 @@ export async function POST(req: NextRequest) {
     .replaceAll(".com", " dot com")
     .replaceAll(".org", " dot org")
     .replaceAll(".co.uk", " dot co dot UK")
+    .replaceAll("°F", " degrees Fahrenheit")
+    .replaceAll("°C", " degrees Celsius")
     .replaceAll(/```[\s\S]*?```/g, "\nAs shown on the app.\n")
     .replaceAll(
       /([a-zA-Z0-9])\/([a-zA-Z0-9])/g,
